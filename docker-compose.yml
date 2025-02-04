@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  produtos:
+    build: ./produtos
+    ports:
+      - "5001:5001"
+    networks:
+      - sales-network
+
+  clientes:
+    build: ./clientes
+    ports:
+      - "5002:5002"
+    networks:
+      - sales-network
+
+  vendas:
+    build: ./vendas
+    ports:
+      - "5003:5003"
+    networks:
+      - sales-network
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    networks:
+      - sales-network
+
+networks:
+  sales-network:
+    driver: bridge

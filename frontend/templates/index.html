@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Vendas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Controle de Vendas</h1>
+    <div id="app">
+        <section>
+            <h2>Cadastrar Produto</h2>
+            <form id="formProduto">
+                <input type="text" id="nomeProduto" placeholder="Nome do Produto" required>
+                <input type="text" id="descricaoProduto" placeholder="Descrição" required>
+                <input type="number" id="valorProduto" placeholder="Valor" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Cadastrar Cliente</h2>
+            <form id="formCliente">
+                <input type="text" id="nomeCliente" placeholder="Nome do Cliente" required>
+                <input type="text" id="telefoneCliente" placeholder="Telefone" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Realizar Venda</h2>
+            <form id="formVenda">
+                <input type="text" id="clienteVenda" placeholder="Nome do Cliente" required>
+                <input type="text" id="produtoVenda" placeholder="Nome do Produto" required>
+                <button type="submit">Vender</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Listar Produtos</h2>
+            <button id="listarProdutos">Listar</button>
+            <ul id="listaProdutos"></ul>
+        </section>
+
+        <section>
+            <h2>Listar Clientes</h2>
+            <button id="listarClientes">Listar</button>
+            <ul id="listaClientes"></ul>
+        </section>
+
+        <section>
+            <h2>Listar Vendas</h2>
+            <button id="listarVendas">Listar</button>
+            <ul id="listaVendas"></ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
